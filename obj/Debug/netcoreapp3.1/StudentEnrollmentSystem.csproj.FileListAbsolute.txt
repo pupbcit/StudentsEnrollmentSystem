@@ -1,0 +1,12 @@
+C:\Users\A17909.000\source\repos\StudentEnrollmentSystem\bin\Debug\netcoreapp3.1\StudentEnrollmentSystem.exe
+C:\Users\A17909.000\source\repos\StudentEnrollmentSystem\bin\Debug\netcoreapp3.1\StudentEnrollmentSystem.deps.json
+C:\Users\A17909.000\source\repos\StudentEnrollmentSystem\bin\Debug\netcoreapp3.1\StudentEnrollmentSystem.runtimeconfig.json
+C:\Users\A17909.000\source\repos\StudentEnrollmentSystem\bin\Debug\netcoreapp3.1\StudentEnrollmentSystem.runtimeconfig.dev.json
+C:\Users\A17909.000\source\repos\StudentEnrollmentSystem\bin\Debug\netcoreapp3.1\StudentEnrollmentSystem.dll
+C:\Users\A17909.000\source\repos\StudentEnrollmentSystem\bin\Debug\netcoreapp3.1\StudentEnrollmentSystem.pdb
+C:\Users\A17909.000\source\repos\StudentEnrollmentSystem\obj\Debug\netcoreapp3.1\StudentEnrollmentSystem.AssemblyInfoInputs.cache
+C:\Users\A17909.000\source\repos\StudentEnrollmentSystem\obj\Debug\netcoreapp3.1\StudentEnrollmentSystem.AssemblyInfo.cs
+C:\Users\A17909.000\source\repos\StudentEnrollmentSystem\obj\Debug\netcoreapp3.1\StudentEnrollmentSystem.csproj.CoreCompileInputs.cache
+C:\Users\A17909.000\source\repos\StudentEnrollmentSystem\obj\Debug\netcoreapp3.1\StudentEnrollmentSystem.dll
+C:\Users\A17909.000\source\repos\StudentEnrollmentSystem\obj\Debug\netcoreapp3.1\StudentEnrollmentSystem.pdb
+C:\Users\A17909.000\source\repos\StudentEnrollmentSystem\obj\Debug\netcoreapp3.1\StudentEnrollmentSystem.genruntimeconfig.cache
