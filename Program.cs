@@ -12,17 +12,22 @@ namespace StudentEnrollmentSystem
             string studentName = "Missy Janelle M. Tolosa";
             string studentAdress = "San Antonio, Binan";
             int age = 19;
+            string username = "jane";
             string password = "missy";
             string course = "DICT";
             string yearlevel = "1st";
 
-            for (int i = 0; i < 3; i++)
+            int i = 0;
+            for (; i < 3; i++)
             {
+                Console.Write("Enter Username:");
+                string usernameInput = Console.ReadLine();
+
                 Console.Write("Enter Password:");
                 string passwordInput = Console.ReadLine();
 
                 Console.WriteLine();
-                if (passwordInput == password)
+                if (usernameInput == username && passwordInput == password)
                 {
                     Console.WriteLine("STUDENT INFORMATION");
                     Console.WriteLine("Student Number: " + studentNumber);
@@ -34,94 +39,45 @@ namespace StudentEnrollmentSystem
                 }
                 else
                 {
-                    Console.WriteLine("Invalid Password.");
+                    Console.WriteLine("Invalid Username or Password.");
                 }
             }
+            if (i == 3)
+            {
+                Console.WriteLine("Application will exit...");
+                Environment.Exit(0);
+            }
 
-            //subject selection
-            string subject1 = "Programming 2";
-            string subject2 = "PE";
-            string subject3 = "English";
-            string subject4 = "Statistics";
-
-            //subject selected
-            string enrolledSubject1 = "";
-            string enrolledSubject2 = "";
-            string enrolledSubject3 = "";
-            string enrolledSubject4 = "";
+            var subjectChoices = new[] { "Programming 2", "PE", "English",
+                                    "Statistics"};
+            var enrolledSubjects = new string[4];
 
             Console.WriteLine();
             Console.WriteLine("Please enter Y if you want to enroll the  subject or N if not.");
+            //iterate through the subjectChoices and get user input if Y or N to be enrolled
 
-            Console.Write("SUBJECT: " + subject1 + ": ");
-            char sub1enrollYorN = char.Parse(Console.ReadLine());
+            for (int subjectIndex = 0; subjectIndex < subjectChoices.Length; subjectIndex++)
+            {
+                Console.Write("SUBJECT " + subjectChoices[subjectIndex] + ":");
+                char userInput = char.Parse(Console.ReadLine());
 
-            if (sub1enrollYorN == 'Y')
-            {
-                enrolledSubject1 = subject1;
-            } else if (sub1enrollYorN != 'Y' || sub1enrollYorN != 'N')
-            {
-                Console.WriteLine("Invalid Input. System will exit.");
+                if (userInput == 'Y')
+                {
+                    enrolledSubjects[subjectIndex] = subjectChoices[subjectIndex];
+                } 
+                else if (userInput == 'N') { Console.Write(""); }
+                else { Console.WriteLine("Invalid Input. Will show next subject..");}
             }
 
-            Console.Write("SUBJECT: " + subject2 + ": ");
-            char sub2enrollYorN = char.Parse(Console.ReadLine());
-
-            if (sub2enrollYorN == 'Y')
-            {
-                enrolledSubject2 = subject2;
-            }
-            else if (sub1enrollYorN != 'Y' || sub1enrollYorN != 'N')
-            {
-                Console.WriteLine("Invalid Input. System will exit.");
-            }
-
-            Console.Write("SUBJECT: " + subject3 + ": ");
-            char sub3enrollYorN = char.Parse(Console.ReadLine());
-
-            if (sub3enrollYorN == 'Y')
-            {
-                enrolledSubject3 = subject3;
-            }
-            else if (sub1enrollYorN != 'Y' || sub1enrollYorN != 'N')
-            {
-                Console.WriteLine("Invalid Input. System will exit.");
-            }
-
-            Console.Write("SUBJECT: " + subject4 + ": ");
-            char sub4enrollYorN = char.Parse(Console.ReadLine());
-
-            if (sub4enrollYorN == 'Y')
-            {
-                enrolledSubject4 = subject4;
-            }
-            else if (sub1enrollYorN != 'Y' || sub1enrollYorN != 'N')
-            {
-                Console.WriteLine("Invalid Input. System will exit.");
-            }
-
-            //OUTPUT ALL SELECTED ENROLLED SUBJECTS
             Console.WriteLine();
             Console.WriteLine("SUBJECTS ENROLLED:");
-            
-            if (enrolledSubject1 != String.Empty)
+            foreach (var enrolled in enrolledSubjects)
             {
-                Console.Write(enrolledSubject1);
-                Console.Write(",");
-            }
-            if (enrolledSubject2 != String.Empty)
-            {
-                Console.Write(enrolledSubject2);
-                Console.Write(",");
-            }
-            if (enrolledSubject3 != String.Empty)
-            {
-                Console.Write(enrolledSubject3);
-                Console.Write(",");
-            }
-            if (enrolledSubject4 != String.Empty)
-            {
-                Console.Write(enrolledSubject4);
+                //if enrolled is null or empty will not display
+                if (!string.IsNullOrEmpty(enrolled))
+                {
+                    Console.WriteLine(enrolled);
+                }
             }
         }
     }
